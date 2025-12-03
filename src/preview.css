@@ -1,0 +1,37 @@
+.preview {
+  display: flex;
+  flex-flow: column wrap;
+  container-type: inline-size;
+  width: min(100%, 40em);
+}
+
+.preview img[alt="article preview"] {
+  object-fit: cover;
+  height: 100%;
+}
+
+.preview footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview figure {
+  display: flex;
+  align-items: center;
+}
+
+.preview img[alt="avatar"] {
+  max-width: 3em;
+  border-radius: 100%;
+}
+
+.preview button {
+  align-content: end;
+}
+
+@media (width >= 26em) {
+  .preview {
+    flex-flow: row;
+  }
+}
