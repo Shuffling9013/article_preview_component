@@ -13,3 +13,7 @@ img {
   width: auto;
   height: auto;
 }
+
+ul {
+  list-style: none;
+}
