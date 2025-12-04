@@ -7,8 +7,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 ### Tasks
 
 - [x] Design card layout
-- [ ] Design share links component
-- [ ] Adding styles
+- [x] Design share links component
+- [x] Adding styles
 - [ ] Build for github pages
 
 ## Overview

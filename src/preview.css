@@ -1,8 +1,24 @@
 .preview {
   display: flex;
   flex-flow: column wrap;
-  container-type: inline-size;
-  width: min(100%, 40em);
+  align-items: center;
+  background-color: #fff;
+  max-width: 50em;
+
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.preview picture {
+  align-self: stretch;
+}
+
+.preview article {
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  max-width: 100%;
 }
 
 .preview img[alt="article preview"] {
@@ -22,6 +38,7 @@
 }
 
 .preview img[alt="avatar"] {
+  margin-inline-end: var(--space-1);
   max-width: 3em;
   border-radius: 100%;
 }
@@ -30,8 +47,12 @@
   align-content: end;
 }
 
-@media (width >= 26em) {
+@media (width >= 32em) {
   .preview {
     flex-flow: row;
+  }
+
+  .preview article {
+    max-width: 32em;
   }
 }

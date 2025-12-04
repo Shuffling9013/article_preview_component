@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Manrope Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500 700;
+  src: url("@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2")
+    format("woff2-variations");
+}
+
+:root {
+  --font-weight: 500;
+  --font-size: clamp(
+    13px,
+    calc(13px + (100vw - 375px) * (18 - 13) / (1440 - 375)),
+    18px
+  );
+  --line-height: 1.2;
+  --line-height-body: 1.5;
+  --font-family: "Manrope Variable", sans-serif;
+
+  --font-1: 700 1.5em / var(--line-height) var(--font-family);
+  --font-2: 500 1em / var(--line-height-body) var(--font-family);
+
+  --space-1: 1em;
+  --space-2: 2em;
+
+  --very-dark-grayish-blue: hsl(217deg 19% 35%);
+  --desaturated-dark-blue: hsl(214deg 17% 51%);
+  --grayish-blue: hsl(212deg 23% 69%);
+  --light-grayish-blue: hsl(210deg 46% 95%);
+}

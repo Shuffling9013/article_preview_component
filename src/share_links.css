@@ -1,35 +1,92 @@
-.share-links {
+article:has(.share-links) {
   position: relative;
 }
 
-.share-links [aria-label="share-button"] {
+.share-links {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: end;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: var(--space-2);
+  width: 100%;
+
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.share-links [aria-label="share-button"] {
   padding: 0.5em;
+  width: var(--space-2);
   border: none;
   border-radius: 100%;
 }
 
+.share-links [aria-label="share-button"] img {
+  width: 100%;
+}
+
 .share-links [aria-label="links-menu"] {
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-2);
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(calc(-100% - 1em)) translateX(-50%);
+  background-color: var(--very-dark-grayish-blue);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
 
-  width: 8em;
-
-  background-color: grey;
+.share-links:has([aria-hidden="true"]) {
+  background-color: transparent;
 }
 
 .share-links [aria-hidden="true"] {
-  visibility: hidden;
+  display: none;
 }
 
 .share-links [aria-pressed="true"] {
-  background-color: grey;
+  background-color: var(--desaturated-dark-blue);
+}
+
+.share-links [aria-pressed="true"] img {
+  filter: brightness(99);
+}
+
+@media (width >= 32em) {
+  article:has(.share-links) {
+    position: static;
+  }
+
+  .share-links {
+    background-color: transparent;
+  }
+
+  .share-links [aria-label="links-menu"] {
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(50% - 1.5 * var(--space-2))) translateY(-125%);
+    flex-wrap: wrap;
+
+    padding: var(--space-1) var(--space-2);
+
+    border-radius: 0.75em;
+  }
+
+  .share-links [aria-label="links-menu"]::after {
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    content: "";
+
+    border-style: solid;
+    border-width: 1em 0.5em 0 0.5em;
+    border-color: var(--very-dark-grayish-blue) transparent transparent
+      transparent;
+  }
 }
