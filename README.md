@@ -2,15 +2,6 @@
 
 This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## TODO
-
-### Tasks
-
-- [x] Design card layout
-- [x] Design share links component
-- [x] Adding styles
-- [ ] Build for github pages
-
 ## Overview
 
 ### The challenge
@@ -20,10 +11,11 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - See the social media share links when they click the share icon
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [article_preview_component](https://shuffling9013.github.io/article_preview_component/)
+
+### Screenshot
+
+![desktop](./screenshots/desktop.png)
+![mobile](./screenshots/mobile.png)
